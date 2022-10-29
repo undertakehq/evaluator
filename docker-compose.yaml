@@ -1,0 +1,16 @@
+version: '3.4'
+services:
+  db:
+    image: postgres:15.0-alpine
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: evaluator
+      PGPASSWORD: evaluator
+      POSTGRES_USER: evaluator
+    ports:
+     - 5432:5432
+    shm_size: 1g
+    volumes:
+      - pgdata:/data/postgresql/data
+volumes:
+  pgdata:
