@@ -1,0 +1,19 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  rspec:
+    name: RSpec
+    run-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+          ruby-version: 3.1.2
+          bundler: 2.3.24
+
+      - name: RSpec
+        run: bundle exec rspec
