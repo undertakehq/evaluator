@@ -41,4 +41,9 @@ This Rails application powers effort to evaluate stock market assets. The initia
 Keep changes focused on expanding the evaluator’s coverage and accuracy. Document new data sources or metrics in the README (or dedicated `docs/` notes) so future contributors understand their intent. Run `bundle exec rspec` before opening a pull request and highlight migrations, configs, or external dependencies in the PR description.
 
 ### Versioning & Commit Messages
-Adhere to Semantic Versioning when tagging releases (`MAJOR.MINOR.PATCH`) and increment versions according to the impact of your changes. Use Conventional Commits for messages, e.g., `feat: add fii cashflow parser`, `fix: correct dividend yield rounding`, or `chore(release): 1.2.0`. Include issue references where relevant (`feat: integrate infomoney source (#42)`).
+- Tag releases using [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`), and increment versions according to the impact of your changes.
+- Use [Conventional Commits](https://www.conventionalcommits.org/) for commit messages. Examples:
+  - `feat: add fii cashflow parser`
+  - `fix: correct dividend yield rounding`
+  - `chore(release): 1.2.0`
+- Reference issues in commit messages where relevant, e.g., `feat: integrate infomoney source (#42)`.
